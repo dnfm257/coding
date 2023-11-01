@@ -11,6 +11,7 @@ void backTracking(int cnt, vector<int> op, vector<int>& visited, int res, int* a
     if(cnt == N - 1){ // 다 뽑으면
         max_value = max(res, max_value);
         min_value = min(res, min_value);
+        return;
     }
 
     for (int i = 0; i < N - 1; i++) {
