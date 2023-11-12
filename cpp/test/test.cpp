@@ -1,14 +1,15 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
 int main(){
-    bool visited[5][2] = { false };
+    vector<vector<bool>> visited(5, vector<bool>(2, true));
 
-    for(int i = 0; i < 5; i++){
-        for(int j = 0; j < 2; j++){
-            cout << visited[i][j] << " ";
+    for(auto i : visited){
+        for(auto j : i){
+            cout << j << " ";
         }
-        cout << "\n";
+        cout << endl;
     }
 }
